@@ -1,0 +1,30 @@
+{
+    "name": "koenigseggposche/yii2-opensearch",
+    "type": "library",
+    "description": "Aliyun OpenSearch library for Yii2 framework",
+    "keywords": [
+        "yii2",
+        "Aliyun",
+        "Open Search",
+        "yii2-opensearch"
+    ],
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "koenigseggposche",
+            "email": "koenigseggposche@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : "~5.5|~7.0",
+        "aliyuncs/oss-sdk-php": "~2.0",
+        "yiisoft/yii2-bootstrap": "@dev",
+        "weann/aliyun-opensearch": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "koenigseggposche\\yii2opensearch\\": ""
+        }
+    }
+}
