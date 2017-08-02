@@ -4,6 +4,7 @@ namespace ethercap\opensearch;
 use yii\base\Component;
 use Aliyun\OpenSearch\CloudsearchClient;
 use Aliyun\OpenSearch\CloudsearchSearch;
+use Aliyun\OpenSearch\CloudsearchSuggest;
 
 class OpenSearch extends Component
 {
@@ -58,5 +59,21 @@ class OpenSearch extends Component
     {
         $search = new CloudsearchSearch($this->client);
         return $search->search($params);
+    }
+
+    /**
+     * 执行suggestion
+     * 执行向API提出suggestion请求
+     * @subparam  index_name 应用名称
+     * @subparam  suggest_name 下拉提示名称
+     * @subparam  hits 返回结果条数
+     * @subparam  query 查询关键词
+     * @return string 返回搜索结果。
+     *
+     */
+    public function suggest($params = [])
+    {
+        $suggetion = new CloudsearchSuggest($this->client);
+        return $suggetion->search($params);
     }
 }
