@@ -2,9 +2,6 @@
 namespace ethercap\opensearch;
 
 use yii\base\Component;
-use Aliyun\OpenSearch\CloudsearchClient;
-use Aliyun\OpenSearch\CloudsearchSearch;
-use Aliyun\OpenSearch\CloudsearchSuggest;
 
 class OpenSearch extends Component
 {
